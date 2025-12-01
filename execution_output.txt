@@ -1,0 +1,81 @@
+
+╔═══════════════════════════════════════════════════╗
+║                                                   ║
+║        ROBOT BEHAVIOR TREE DEMONSTRATION          ║
+║                                                   ║
+║  Task: Enter Room → Open Fridge → Pick Apple     ║
+║        → Exit Room                                ║
+║                                                   ║
+╚═══════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════
+INITIALIZATION PHASE
+═══════════════════════════════════════════════════
+[Factory] BehaviorTreeFactory created
+
+[Registering Nodes]
+[Registration Complete] All nodes registered successfully
+
+[Tree Definition]
+Behavior Tree Structure:
+  Sequence (executes children in order)
+    ├── EnterRoom
+    ├── OpenFridge
+    ├── PickApple
+    └── ExitRoom
+
+[Creating Tree] Building behavior tree from XML...
+[Node Created] EnterRoom node initialized
+[Node Created] OpenFridge node initialized
+[Node Created] PickApple node initialized
+[Node Created] ExitRoom node initialized
+[Tree Created] Behavior tree successfully built!
+
+═══════════════════════════════════════════════════
+EXECUTION PHASE
+═══════════════════════════════════════════════════
+
+┌─────────────────────────────────┐
+│ [EnterRoom] EXECUTING           │
+└─────────────────────────────────┘
+  → Robot approaching room entrance...
+  → Checking if path is clear...
+  → Moving through doorway...
+  ✓ Successfully entered the room!
+
+┌─────────────────────────────────┐
+│ [OpenFridge] EXECUTING          │
+└─────────────────────────────────┘
+  → Navigating to fridge location...
+  → Detecting fridge handle...
+  → Grasping handle with gripper...
+  → Pulling door open...
+  ✓ Fridge is now open!
+
+┌─────────────────────────────────┐
+│ [PickApple] EXECUTING           │
+└─────────────────────────────────┘
+  → Scanning fridge contents...
+  → Apple detected at position (x:0.3, y:0.5, z:1.2)...
+  → Moving arm to apple position...
+  → Closing gripper around apple...
+  → Lifting apple...
+  ✓ Apple successfully picked!
+
+┌─────────────────────────────────┐
+│ [ExitRoom] EXECUTING            │
+└─────────────────────────────────┘
+  → Planning path to exit...
+  → Navigating to doorway...
+  → Passing through exit...
+  ✓ Successfully exited the room!
+  🎉 MISSION COMPLETE!
+
+═══════════════════════════════════════════════════
+FINAL REPORT
+═══════════════════════════════════════════════════
+Status: ✓ SUCCESS
+Result: All tasks completed successfully!
+The robot has completed the mission.
+═══════════════════════════════════════════════════
+
